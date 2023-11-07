@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<title>DOM, JS. Считываем информацию из DOM. Событие</title>
+</head>
+<body>
+<style>
+
+    body{
+        background-image: url(passpotr_shablon.png);
+        background-position: center-bottom;
+        background-repeat: no-repeat;
+    }
+
+    .blockPlaceOfIssue{
+        margin-left: 140px;
+        margin-top: 65px;
+
+    }
+
+    .blockDateOfIssue{
+        margin-left: 80px;
+        margin-top: 50px;
+    }
+
+    .blockDepartmentCode{
+        margin-left: 250px;
+        margin-top: -18px;
+    }
+
+    .blockSurname{
+        margin-left: 200px;
+        margin-top: 185px;
+    }
+
+    .blockName{
+        margin-left: 180px;
+        margin-top: 30px;
+    }
+
+    .blockPatronymic{
+        margin-left: 190px;
+        margin-top: 3px;
+    }
+
+    .blockSex{
+        margin-left: 160px;
+        margin-top: 5px;
+    }
+
+    .blockBirthday{
+        margin-left: 260px;
+        margin-top: -20px;
+    }
+
+    .blockPlaceOfBirth{
+        margin-left: 190px;
+        margin-top: 5px;
+    }
+
+    .photo {
+    margin-left: 27px;
+    margin-top: -94px;
+    }
+
+    .translateButton{
+    margin-left: 90px;
+    margin-top: 120px;
+    }
+
+    .cancelButton{
+    margin-left: 240px;
+    margin-top: -21px;
+    }
+
+    input {
+        background: transparent;
+        border: none;
+    }
+
+    select {
+        background: transparent;
+        border: none;
+    }
+
+
+
+</style>
+
+<div class="blockPlaceOfIssue"><input type="text" id="placeOfIssue" style="font-weight: bold;text-transform:uppercase" placeholder="Паспорт выдан" ></div>
+<div class="blockDateOfIssue"><input type="date" id="dateOfIssue" name="datemax" max="2023-09-07"></div>
+<div class="blockDepartmentCode"><input type="text" id="departmentCode" maxlength="7" placeholder="Код подразделения" pattern="[0-9]{3}\-[0-9]{3}" required>
+</div>
+<div class="blockSurname"><input type="text" value="Иванов" readonly="readonly" id="surname" style="font-weight: bold"></div>
+<div class="blockName"><input type="text" value="Иван" readonly="readonly" id="name"></div>
+<div class="blockPatronymic"><input type="text" id="patronymic" placeholder="Отчество"></div>
+<div class="blockSex"><select id="sex" size="1">
+    <option selected value="s1">жен.</option>
+    <option value="s2">муж.</option>
+</select>
+</div>
+<div class="blockBirthday"><input type="date" value="2001-01-01" readonly="readonly" id="dateOfBirthday" name="datemax" max="2023-09-07"></div>
+<div class="blockPlaceOfBirth"><input type="text" id="placeOfBirth" placeholder="Место рождения"></div>
+<div class="photo"><img src="men.jpg" height="141" width="111"/></div>
+<div class="translateButton"><button type="button" name="translation" onclick="edit_all();">Перевести</button></div>
+<div class="cancelButton"><button type="button" name="translation" onclick="default_all();">Отмена</button></div>
+</body>
+<script src="./js/ex1.3.js"></script>
+</html>
